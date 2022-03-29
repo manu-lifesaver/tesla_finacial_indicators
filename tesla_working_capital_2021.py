@@ -3,7 +3,7 @@ Type "help", "copyright", "credits" or "license()" for more information.
 # Using pandas to read the csv file.
 import pandas as pd
 # Creating a DataFrame from the csv file
-tesla_bs = pd.read_csv (".../Tesla_Balance_Sheet.csv")
+tesla_bs = pd.read_csv ("path/to/Tesla_Balance_Sheet.csv")
 # Creating current assets DataFrame 
 ca_df = tesla_bs.loc[tesla_bs["Account"] == "Current Assets"]
 # Creating current liabilities DataFrame
