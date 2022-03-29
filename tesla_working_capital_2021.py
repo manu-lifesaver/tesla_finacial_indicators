@@ -4,17 +4,5 @@ Type "help", "copyright", "credits" or "license()" for more information.
 import pandas as pd
 # Creating a DataFrame from the csv file
 tesla_bs = pd.read_csv ("path/to/Tesla_Balance_Sheet.csv")
-# Creating current assets DataFrame 
-ca_df = tesla_bs.loc[tesla_bs["Account"] == "Current Assets"]
-# Creating current liabilities DataFrame
-cl_df = tesla_bs.loc[tesla_bs["Account"] == "Current Liabilities"]
-# Converting DataFrames to lists
-ca_list = ca_df.values.tolist()
-cl_list = cl_df.values.tolist()
-# Selecting 2021 values and converting them to integers
-ca_2021 = int(ca_list[0][1])
-cl_2021 = int(cl_list[0][1])
-#  Calculating working capital for the year 2021
-#(working capital = current assets - current liabilities)
-wc_2021 = ca_2021 - cl_2021
-print(wc_2021)
+# Setting Account column as the index
+tesla_ind = tesla_bs.index("Account")
